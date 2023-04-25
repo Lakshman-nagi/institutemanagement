@@ -1,0 +1,13 @@
+body
+{
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:1800px 900px;
+  background-image:url('{% static 'images/institute.jpg' %}');
+}
+input {
+  padding: 12px 20px;
+  margin: 8px 0;;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;

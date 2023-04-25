@@ -1,0 +1,34 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+<link href="{% static 'css/display.css' %}" rel="stylesheet">
+
+<div class="container" id="customers">
+    <table class="table table-striped">
+        <h1 align="center"><b>student details</b></h1>
+        <tr>
+            <th>std_id</th>
+            <th>std_name</th>
+            <th>std_age</th>
+            <th>std_phon</th>
+            <th>std_city</th>
+            <th>std_course</th>
+            <th>#</th>
+            <th>#</th>
+
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.Std_Name}}</td>
+            <td>{{i.Std_Age}}</td>
+            <td>{{i.Std_Phno}}</td>
+            <td>{{i.Std_City}}</td>
+            <td>{{i.Std_Course}}</td>
+            <td><a class="btn btn-primary" href="{% url 'update' i.id %}">update</a></td>
+            <td><a class="btn btn-warning" href="{% url 'delete' i.id %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}
